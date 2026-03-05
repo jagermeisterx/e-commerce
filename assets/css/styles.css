@@ -1,13 +1,14 @@
 .card-img-top {
-    height: 350px;
-    object-fit: cover;
+    height: 300px;
+    object-fit: cover; /* Recorta la imagen para que rellene el espacio sin deformarse */
 }
 
 .card {
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s;
 }
+
 .card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.02);
 }
 /* Mobile-first: Ajuste de fuente en pantallas pequeñas */
 @media (max-width: 420px) {

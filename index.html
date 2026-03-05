@@ -3,43 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MangaWorld | MVP</title>
+    <title>MangaStore | MVP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">MangaWorld</a>
-                <div class="d-flex">
-                    <a href="#" class="btn btn-outline-light position-relative">
-                        🛒 Carrito
-                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            0
-                        </span>
-                    </a>
-                </div>
+                <a class="navbar-brand" href="#">MangaStore</a>
+                <button class="btn btn-outline-light position-relative" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+                    🛒 Carrito 
+                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <main class="container my-5">
-        <section id="hero" class="text-center mb-5">
-            <h1 class="display-4">Novedades en Manga</h1>
-            <p class="lead">Las últimas aventuras, directo a tu estantería.</p>
+    <main class="container mt-5 pt-5">
+        <section class="text-center py-4">
+            <h1>Catálogo de Mangas</h1>
         </section>
 
-        <section id="product-grid" class="row row-cols-1 row-cols-md-3 g-4">
+        <section id="contenedor-productos" class="row row-cols-1 row-cols-md-3 g-4">
             </section>
     </main>
 
-    <footer class="bg-dark text-white pt-4 pb-2">
-        <div class="container text-center">
-            <p>MangaWorld Store © 2026 - Proyecto para módulo M2</p>
-            <small>Aceptamos todas las tarjetas de crédito ninja.</small>
+    <div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tu Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="lista-carrito" class="list-group mb-3">
+                        </ul>
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Total:</span>
+                        <span id="total-carrito">$0</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success">Finalizar Compra (Próximamente)</button>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2026 MangaStore - Proyecto Educativo</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
