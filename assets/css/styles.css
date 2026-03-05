@@ -10,6 +10,20 @@
 .card:hover {
     transform: scale(1.02);
 }
+footer {
+    border-top: 4px solid #0d6efd; 
+}
+
+footer h5 {
+    font-size: 1.1rem;
+    color: #0d6efd;
+}
+
+/* ajuste para que el Navbar no tape el contenido del home */
+body {
+    padding-top: 70px;
+}
+
 /* Mobile-first: Ajuste de fuente en pantallas pequeñas */
 @media (max-width: 420px) {
     h1 {
